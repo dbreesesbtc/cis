@@ -4,7 +4,7 @@ Computer Inventory Script (CIS). Collects inventory details of a computer and du
 Version:		1.0 (06/7/2018)
 Tested OS:		Windows (XP, Vista, 7, 8, 8.1, 10) HP Machines
 Written By:		Esmeil Naqeeb (blog.esmeilnaqeeb.com)
-Contributions By: David Breese (dabreese00@gmail.com)
+Contributions By: David Breese
 
 This script captures the following attributes of a computer/server:
 
