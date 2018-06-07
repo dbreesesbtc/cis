@@ -20,7 +20,7 @@ set HR=%HR: =0%
 set HR=%HR: =%
 
 ::Define path to the network share: (. for current directory, S:\ for drive mounted on S:)
-set network-share=.
+set network-share=\\example\this-will-fail
 
 ::Set School/Parish
 ::set location=Your-School/Parish
