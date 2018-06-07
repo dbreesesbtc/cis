@@ -140,7 +140,9 @@ color e
 @echo What do you want to do with the inventory details?
 @echo.
 
-@echo 1	Write them to csv file
+@echo 1	Send them to the Google form
+@echo 2	Write them to csv file
+@echo 3	Do 1 and 2
 @echo 0	Exit
 @echo.
 set /p sendInv=Enter your choice: 
@@ -148,8 +150,23 @@ set /p sendInv=Enter your choice:
 @echo.
 if %sendInv% EQU 0 (cls & @echo Thank you for using Computer Inventory Script & @echo. & @echo Exiting... & timeout 3 & exit 0)
 if %sendInv% EQU 1 (set /p techName=Please enter your name: )
+if %sendInv% EQU 2 (set /p techName=Please enter your name: )
+if %sendInv% EQU 3 (set /p techName=Please enter your name: )
 ::if %sendInv% EQU 1 (set techName=Your-Name-of-not-prompting)
+::if %sendInv% EQU 2 (set techName=Your-Name-of-not-prompting)
+::if %sendInv% EQU 3 (set techName=Your-Name-of-not-prompting)
 
+if %sendInv% EQU 1 (goto:to-google-form)
+if %sendInv% EQU 2 (goto:to-csv)
+
+:to-google-form
+@echo Sending data to Google form...
+curl -k https://docs.google.com/forms/d/17pMgnvFIp861-RxwFRv2Yri227Bg2wGziCCNuOS-i2U/formResponse -d ifq -d entry.1478084243=%location% -d entry.434361443=%Room-Num% -d entry.411325200=%computername% -d entry.1145761944=%model% -d entry.1133893838=%sku% -d entry.1161298755=%serialNo% -d entry.145532750=%assetTag% -d entry.601550432=%osver% -d entry.2087229678=%arch% -d entry.1354495799=%processorGen% -d entry.1130188460=%TotalPhyRam% -d entry.1001225982=%TotalDiskSpace% -d entry.2052612064=%FreeDiskSpace% -d entry.128942743=%techName% -d submit=Submit
+@echo.
+@echo.
+if %sendInv% EQU 1 (goto:end)
+
+:to-csv
 @echo Writing data to csv file...
 if exist %network-share%\inventory_%YEAR%-%MONTH%-%DATE%.csv goto:write-data-only
 
