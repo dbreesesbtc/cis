@@ -23,10 +23,10 @@ set HR=%HR: =%
 set network-share=.
 
 ::Set School/Parish
-set location=Your-School/Parish
+::set location=Your-School/Parish
 
 ::Prompt user for location:
-::set /p location=What is your location (STGV, SFB, CYPR, SBTC)?
+set /p location=What is your location (STGV, SFB, CYPR, SBTC)?
 ::@echo Location: %location%
 
 ::Get Room Number:
