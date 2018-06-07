@@ -24,11 +24,11 @@ Instructions on how to use this script:
 
 	Customizing the script for your use:
 
-	Edit line 18, 25 and 147 to 149:
+	Edit line 26, 33 and 155 to 157:
 
-	Line 18: 		Change it to your school/parish or prompt user (line 21)
-	Line 25:		Change it to the room you are working in, or prompt user (line 28)
-	Line 147 to 149:	Change it to your name (without spaces: Esmeil-Naqeeb), or you can use the prompt user method (line 144 to 146)
+	Line 26: 		Change it to your school/parish or prompt user (line 29)
+	Line 33:		Change it to the room you are working in, or prompt user (line 36)
+	Line 155 to 157:	Change it to your name (without spaces: Esmeil-Naqeeb), or you can use the prompt user method (line 152 to 154)
 
 The CSV file is date stamped e.g: inventory_YEAR-MONTH-DATE.csv
 
@@ -39,7 +39,7 @@ Just double click the main.bat file and follow the instructions.
 **** Please review inventory data before you submit it! ****
 
 Notes:
-You can dump all inventory data to a file instead of sending it to a Google from by defining the network path on line 20. (assumes that the network share is mounted with write permissions)
+You can dump all inventory data to a file instead of sending it to a Google from by defining the network path on line 23. (assumes that the network share is mounted with write permissions)
 
 You can comment out the timeouts to make the script faster. (::timeout 3)
 
