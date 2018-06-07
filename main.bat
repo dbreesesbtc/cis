@@ -8,7 +8,7 @@ cd /d %0\..
 @echo Version:	1.0 (06/7/2018)
 @echo Tested OS:		Windows (7, 8, 8.1,10) HP Machines
 @echo Written By: Esmeil Naqeeb (blog.esmeilnaqeeb.com)
-@echo Contributions By: David Breese (dabreese00@gmail.com)
+@echo Contributions By: David Breese
 @echo.
 @echo.
 timeout 3
